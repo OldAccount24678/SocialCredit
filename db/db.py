@@ -26,10 +26,10 @@ def InsertValues(name, id):
 	cursor.close()
 	con.close()
 
-def UpdateValue(znak, num, what, id):
+def UpdateValue(znak, num, objj, id):
 	con = sqlite3.connect(path_user_db)
 	cursor = con.cursor()
-	cursor.execute(f"SELECT {what} FROM users WHERE id = {id}")
+	cursor.execute(f"SELECT {objj} FROM users WHERE id = {id}")
 	try:
 		var = cursor.fetchone()[0]
 	except:
@@ -45,7 +45,7 @@ def UpdateValue(znak, num, what, id):
 		return
 	if num2 < 0:
 		num2 = 0
-	cursor.execute(f"UPDATE users SET {what} = {num2} WHERE id = {id}")
+	cursor.execute(f"UPDATE users SET {objj} = {num2} WHERE id = {id}")
 	con.commit()
 	cursor.close()
 	con.close()
@@ -62,10 +62,10 @@ def Select(objj, fromm, id):
 	con.close()
 	return jaj
 
-def AllUsers(what, order_by, limito):
+def AllUsers(obj, order_by, limito):
 	con = sqlite3.connect(path_user_db)
 	cursor = con.cursor()
-	cursor.execute(f"SELECT {what} FROM users ORDER BY {order_by} DESC LIMIT {limito}")
+	cursor.execute(f"SELECT {objj} FROM users ORDER BY {order_by} DESC LIMIT {limito}")
 	try:
 		jaj = cursor.fetchall()
 	except:
