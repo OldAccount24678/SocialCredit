@@ -19,4 +19,4 @@ $ ```python3 main.py```
 
 **Qiwi**: **[AmokDev](https://qiwi.com/n/AmokDev)**
 
-**YooMoney**: ```**4100117886581372**```
+**YooMoney**: **```4100117886581372```**
