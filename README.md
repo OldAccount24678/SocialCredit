@@ -11,7 +11,7 @@ $ ```git clone https://github.com/AmokDev/SocialCredit```
 
 $ ```cd SocialCredit```
 
-$ ```pip3 install requirements.txt```
+$ ```pip3 install -r requirements.txt```
 
 $ ```Установите токен бота в файле .env```
 
