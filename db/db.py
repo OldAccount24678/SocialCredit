@@ -62,7 +62,7 @@ def Select(objj, fromm, id):
 	con.close()
 	return jaj
 
-def AllUsers(obj, order_by, limito):
+def AllUsers(objj, order_by, limito):
 	con = sqlite3.connect(path_user_db)
 	cursor = con.cursor()
 	cursor.execute(f"SELECT {objj} FROM users ORDER BY {order_by} DESC LIMIT {limito}")
